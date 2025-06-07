@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robo-Eyes Configurator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="eye-display-area">
+        <div id="left-eye"></div>
+        <div id="right-eye"></div>
+    </div>
+
+    <div id="controls-area">
+        <div>
+            <label for="screenWidth">Screen Width (px):</label>
+            <input type="number" id="screenWidth" value="128">
+        </div>
+        <div>
+            <label for="screenHeight">Screen Height (px):</label>
+            <input type="number" id="screenHeight" value="64">
+        </div>
+        <div>
+            <label for="frameRate">Max Frame Rate (FPS):</label>
+            <input type="number" id="frameRate" value="60">
+        </div>
+        <div>
+            <label for="leftEyeWidth">Left Eye Width:</label>
+            <input type="number" id="leftEyeWidth" value="50">
+        </div>
+        <div>
+            <label for="leftEyeHeight">Left Eye Height:</label>
+            <input type="number" id="leftEyeHeight" value="50">
+        </div>
+        <div>
+            <label for="leftEyeBorderRadius">Left Eye Border Radius:</label>
+            <input type="number" id="leftEyeBorderRadius" value="0">
+        </div>
+        <div>
+            <label for="rightEyeWidth">Right Eye Width:</label>
+            <input type="number" id="rightEyeWidth" value="50">
+        </div>
+        <div>
+            <label for="rightEyeHeight">Right Eye Height:</label>
+            <input type="number" id="rightEyeHeight" value="50">
+        </div>
+        <div>
+            <label for="rightEyeBorderRadius">Right Eye Border Radius:</label>
+            <input type="number" id="rightEyeBorderRadius" value="0">
+        </div>
+        <div>
+            <label for="spaceBetweenEyes">Space Between Eyes:</label>
+            <input type="number" id="spaceBetweenEyes" value="10">
+        </div>
+        <div>
+            <label for="mood">Mood:</label>
+            <select id="mood">
+                <option value="DEFAULT">DEFAULT</option>
+                <option value="TIRED">TIRED</option>
+                <option value="ANGRY">ANGRY</option>
+                <option value="HAPPY">HAPPY</option>
+            </select>
+        </div>
+        <div>
+            <label for="position">Position:</label>
+            <select id="position">
+                <option value="DEFAULT">DEFAULT</option>
+                <option value="N">N</option>
+                <option value="NE">NE</option>
+                <option value="E">E</option>
+                <option value="SE">SE</option>
+                <option value="S">S</option>
+                <option value="SW">SW</option>
+                <option value="W">W</option>
+                <option value="NW">NW</option>
+            </select>
+        </div>
+        <div>
+            <input type="checkbox" id="cyclopsMode">
+            <label for="cyclopsMode">Cyclops Mode</label>
+        </div>
+        <div>
+            <input type="checkbox" id="curiousMode">
+            <label for="curiousMode">Curious Mode</label>
+        </div>
+        <div>
+            <input type="checkbox" id="autoblinker">
+            <label for="autoblinker">Autoblinker</label>
+        </div>
+    </div>
+
+    <div id="generated-code-area">
+        <textarea id="generated-code" rows="10" cols="50" readonly placeholder="Generated C++ code will appear here..."></textarea>
+    </div>
+
+    <div id="sequence-constructor-area">
+        <h2>Reaction Sequence</h2>
+        <div>
+            <label for="step-duration">Step Duration (ms):</label>
+            <input type="number" id="step-duration" value="1000" min="100">
+        </div>
+        <button id="add-step-button">Add Current Settings as Step</button>
+        <div id="sequence-steps-display">
+            <!-- Sequence steps will be populated here by JavaScript -->
+        </div>
+        <button id="clear-sequence-button">Clear Sequence</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
